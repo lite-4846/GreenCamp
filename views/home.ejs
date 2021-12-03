@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCamp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+</head>
+
+<body class="d-flex text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div class="">
+                <h3 class="float-md-start mb-0 new-font display-6 fs-2">GreenCamp</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end new-font">
+                    <a href="#" aria-current="page" class="nav-link active me-3">Home</a>
+                    <a href="/campgrounds" class="nav-link me-3">Campgrounds</a>
+                    <% if (!currentUser) { %> 
+                    <a href="/login" class="nav-link me-3">Login</a>
+                    <a href="/register" class="nav-link me-3">Register</a>
+                    <% } else { %> 
+                    <a href="/logout" class="nav-link me-3">LogOut</a>
+                    <% } %> 
+                </nav>
+            </div>
+        </header>
+        <main class="px-3">
+            <h1 class="display-5">GreenCamp</h1>
+            <p class="lead">Welcome to GreeCamp! <br> Jump right in and explore our many campgrounds. <br>
+                 Feel free to share some of your own and comment on others!</p>
+            <a href="/campgrounds" class="btn btn-secondary font-weight-bold text-white">All Campgrounds!</a>
+        </main>
+
+        <footer class="mt-auto text-white-50">
+            <p>&copy; 2020 GreenCamp</p>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="/javascripts/validate.js"></script>
+</body>
+
+</html>

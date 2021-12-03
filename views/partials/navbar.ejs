@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+    <div class="container-fluid  h-25">
+      <a class="navbar-brand fs-6 " href="/">GreenCamp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/campgrounds">Campgrounds</a>
+          <a class="nav-link" href="/campgrounds/new">Make New</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <% if(!currentUser) { %> 
+          <a class="nav-link" href="/login">Log IN</a>
+          <a class="nav-link" href="/register">Register</a>
+          <% } else { %> 
+          <a class="nav-link" href="/logout">LogOut</a>
+          <% } %> 
+        </div>
+      </div>
+    </div>
+</nav>
