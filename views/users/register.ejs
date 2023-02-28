@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate') %>
 
-<div class="container d-flex justify-content-center align-items-cen  mt-5">
+<div class="container d-flex justify-content-center align-items-cen  mt-3">
     <div class="row">
         <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
             <div class="card shadow">
@@ -10,23 +10,23 @@
                     <h5 class="card-title">Register</h5>
 
                     <form action="/register" class="Validated-form" novalidate method="post">
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <label for="username" class="form-label">Username : </label>
                             <input type="text" class="form-control" id="username" name="username" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <label for="email" class="form-label">Email : </label>
                             <input type="email" class="form-control" id="email" name="email" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <label for="password" class="form-label">Password : </label>
-                            <input type="password" class="form-control" id="password" name="password" required>
+                            <input type="password" class="form-control" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="Must contain at least one number and lowercase letter, and at least 8 or more characters" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
